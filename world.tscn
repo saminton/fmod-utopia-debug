@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://mdrncpg2w15l"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gv5m4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://banks/desktop/Master.strings.bank", "res://banks/desktop/Master.bank", "res://banks/desktop/Ambience.bank"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Siren"
+event_guid = "{0782084a-7c3c-4cf4-8865-74d7ca75dfce}"
+autoplay = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_gv5m4")
