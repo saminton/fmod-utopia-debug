@@ -12,10 +12,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]
 
-[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_gv5m4")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="MeshInstance3D"]
 event_name = "event:/Siren"
 event_guid = "{0782084a-7c3c-4cf4-8865-74d7ca75dfce}"
 autoplay = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_gv5m4")
